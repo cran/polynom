@@ -1,20 +1,27 @@
-polylist <- function(...) {
+polylist <-
+function(...)
+{
     P <- lapply(list(...), as.polynomial)
     structure(P, class = "polylist")
 }
 
-deriv.polylist <- function(p, ...) 
-    structure(lapply(p, deriv), class = class(p))
+deriv.polylist <-
+function(expr, ...) 
+    structure(lapply(expr, deriv), class = class(expr))
 
-integral.polylist <- function(p, ...) {
-    result <- lapply(p, integral, ...)
+integral.polylist <-
+function(expr, ...)
+{
+    result <- lapply(expr, integral, ...)
     if (length(result) > 0 && is.polynomial(result[[1]]))
-        class(result) <- class(p)
+        class(result) <- class(expr)
     result
 }
 
-plot.polylist <- function(p, xlim = 0:1, ylim = range(Px), type = "l",
-                          len = 100, ...) {
+plot.polylist <-
+function(x, xlim = 0:1, ylim = range(Px), type = "l", len = 100, ...)
+{
+    p <- x                              # generic/method
     if(missing(xlim)) {
         ## try to cover the "interesting" region
         xlim <- range(Re(unlist(lapply(p, summary.polynomial))))
@@ -42,7 +49,9 @@ plot.polylist <- function(p, xlim = 0:1, ylim = range(Px), type = "l",
     invisible()
 }
 
-print.polylist <- function(x, ...) {
+print.polylist <-
+function(x, ...)
+{
     cat("List of polynomials:\n")
     y <- x
     x <- unclass(x)

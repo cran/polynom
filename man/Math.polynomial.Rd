@@ -5,12 +5,12 @@
   Group method for functions in the Math group.
 }
 \usage{
-Math.polynomial(p, digits)
+Math.polynomial(x, \dots)
 }
 \arguments{
-  \item{p}{an object of class \code{"polynomial"}.}
-  \item{digits}{precision, as required by \code{round()} or
-    \code{signif()}.}
+  \item{x}{an object of class \code{"polynomial"}.}
+  \item{\dots}{further arguments to be passed to or from methods, such
+    as \code{digits}.}
 }
 \details{
   Most math group functions are disallowed with polynomial arguments.

@@ -1,15 +1,21 @@
-polynomial <- function(coef = c(0, 1)) {
+polynomial <-
+function(coef = c(0, 1))
+{
     a <- as.numeric(coef)
     while((la <- length(a)) > 1 && a[la] == 0) a <- a[-la]
     structure(a, class = "polynomial")
 }
 
-as.polynomial <- function(p)
+as.polynomial <-
+function(p)
     if(is.polynomial(p)) p else polynomial(p)
-is.polynomial <- function(p)
+is.polynomial <-
+function(p)
     inherits(p, "polynomial")
 
-Ops.polynomial <- function(e1, e2) {
+Ops.polynomial <-
+function(e1, e2)
+{
     if(missing(e2))
         return(switch(.Generic,
                       "+" = e1, 
@@ -83,10 +89,14 @@ Ops.polynomial <- function(e1, e2) {
                stop("unsupported operation on polynomials"))
     polynomial(e1.op.e2)
 }
-Summary.polynomial <- function(p) {
+Summary.polynomial <-
+function(x, ...)
+{
     stop(paste(.Generic, "invalid for polynomials"))
 }
-Math.polynomial <- function(p, digits) {
+Math.polynomial <-
+function(x, ...)
+{
     switch(.Generic,
            round = ,
            signif = ,
@@ -96,7 +106,9 @@ Math.polynomial <- function(p, digits) {
            stop(paste(.Generic, "unsupported for polynomials")))
 }
 
-as.character.polynomial <- function(p) {
+as.character.polynomial <-
+function(p)
+{
     p <- unclass(p)
     lp <- length(p) - 1
     names(p) <- 0:lp
@@ -122,8 +134,10 @@ as.character.polynomial <- function(p) {
     paste(signs, p, stars, pow, sep = "", collapse = " ")
 }
 
-print.polynomial <- function(p0, ...) {
-    p <- as.character.polynomial(signif(p0, 
+print.polynomial <-
+function(x, ...)
+{
+    p <- as.character.polynomial(signif(x, 
                                         digits =
                                         options("digits")$digits))
     pc <- nchar(p)
@@ -137,10 +151,13 @@ print.polynomial <- function(p0, ...) {
                 m2 <- m2 - 1
         cat(substring(p, m1, m2), "\n")
     }
-    invisible(p0)
+    invisible(x)
 }  
 
-as.function.polynomial <- function(p) {
+as.function.polynomial <-
+function(x, ...)
+{
+    p <- x                              # generic/method
     horner <- function(p) {
         a <- as.character(rev(unclass(p)))
         h <- a[1]
@@ -156,7 +173,9 @@ as.function.polynomial <- function(p) {
     f
 }
 
-poly.orth <- function(x, degree = length(unique(x)) - 1, norm = TRUE) {
+poly.orth <-
+function(x, degree = length(unique(x)) - 1, norm = TRUE)
+{
     at <- attr(poly(x, degree), "coefs")
     a <- at$alpha
     N <- at$norm2

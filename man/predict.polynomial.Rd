@@ -2,10 +2,10 @@
 \alias{predict.polynomial}
 \title{Evaluate a Polynomial}
 \usage{
-\method{predict}{polynomial}(p, newdata, \dots)
+\method{predict}{polynomial}(object, newdata, \dots)
 }
 \arguments{
-  \item{p}{A polynomial object to be evaluated.}
+  \item{object}{A polynomial object to be evaluated.}
   \item{newdata}{Argument at which evaluation is requested.  May be
     numeric or itself a polynomial}
   \item{\dots}{Not used by this method.}

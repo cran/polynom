@@ -6,11 +6,11 @@
   be automatically determined.
 }
 \usage{
-\method{plot}{polynomial}(p, xlim = 0:1, ylim = range(Px), type = "l",
+\method{plot}{polynomial}(x, xlim = 0:1, ylim = range(Px), type = "l",
                 len = 100, \dots)
 }
 \arguments{
-  \item{p}{an object of class \code{"polynomial"}.}
+  \item{x}{an object of class \code{"polynomial"}.}
   \item{xlim}{the range to be encompased by the x axis.}
   \item{ylim}{the range to be encompased by the y axis.}    
   \item{type}{as for \code{\link{plot}()}.}

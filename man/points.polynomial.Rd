@@ -5,11 +5,11 @@
   Add a polynomial to an existing plot usually as a point plot.
 }
 \usage{
-\method{points}{polynomial}(p, len = 100, \dots)
+\method{points}{polynomial}(x, length = 100, \dots)
 }
 \arguments{
-  \item{p}{an object of class \code{"polynomial"}.}
-  \item{len}{size of x vector at which evaluations are to be made.}
+  \item{x}{an object of class \code{"polynomial"}.}
+  \item{length}{size of x vector at which evaluations are to be made.}
   \item{\dots}{additional arguments as for the points generic.}
 }
 \details{

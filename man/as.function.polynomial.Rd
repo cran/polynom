@@ -6,10 +6,11 @@
   it at arbitrary points.
 }
 \usage{
-\method{as.function}{polynomial}(p)
+\method{as.function}{polynomial}(x, \dots)
 }
 \arguments{
-  \item{p}{An object of class \code{"polynomial"}.}
+  \item{x}{An object of class \code{"polynomial"}.}
+  \item{\dots}{further arguments to be passed to or from methods.}
 }
 \details{
   This is a method for the generic function \code{\link{as.function}}.

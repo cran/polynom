@@ -1,3 +1,20 @@
+2001-08-20  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.1-7.
+
+	* R/polybase.R:
+	* R/polylist.R:
+	* R/polyxtra.R:
+	* man/Math.polynomial.Rd:
+	* man/Summary.polynomial.Rd:
+	* man/as.function.polynomial.Rd:
+	* man/deriv.polynomial.Rd:
+	* man/lines.polynomial.Rd:
+	* man/plot.polynomial.Rd:
+	* man/points.polynomial.Rd:
+	* man/predict.polynomial.Rd:
+	Fix generic/method inconsistencies.
+
 2001-06-02  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
 
 	* DESCRIPTION (Version): New version is 1.1-6.

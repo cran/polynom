@@ -5,10 +5,11 @@
   Calculates the derivative of a univariate polynomial.
 }
 \usage{
-\method{deriv}{polynomial}(expr)
+\method{deriv}{polynomial}(expr, \dots)
 }
 \arguments{
   \item{expr}{an object of class \code{"polynomial"}.}
+  \item{\dots}{further arguments to be passed to or from methods.}
 }
 \details{
   This is a method for the generic function \code{\link{deriv}}.

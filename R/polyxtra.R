@@ -1,4 +1,6 @@
-change.origin <- function(p, o) {
+change.origin <-
+function(p, o)
+{
     if(!is.polynomial(p))
         stop(paste("\"", deparse(substitute(p)), "\"", 
                    " is not a polynomial"))
@@ -17,7 +19,9 @@ change.origin <- function(p, o) {
 coef.polynomial <- function(object,...)
     as.vector(object)
 
-deriv.polynomial <- function(expr, ...) {
+deriv.polynomial <-
+function(expr, ...)
+{
     expr <- unclass(expr)
     if(length(expr) == 1)
         return(polynomial(0))
@@ -27,7 +31,9 @@ deriv.polynomial <- function(expr, ...) {
 
 integral <- function(expr, ...) UseMethod("integral")
 
-integral.polynomial <- function(expr, limits = NULL, ...) {
+integral.polynomial <-
+function(expr, limits = NULL, ...)
+{
     expr <- unclass(expr)
     p <- polynomial(c(0, expr/seq(along = expr)))
     if(is.null(limits))
@@ -36,7 +42,10 @@ integral.polynomial <- function(expr, limits = NULL, ...) {
         diff(predict(p, limits))
 }
 
-lines.polynomial <- function(p, len = 100, ...) {
+lines.polynomial <-
+function(x, len = 100, ...)
+{
+    p <- x                              # generic/method
     pu <- par("usr")
     x <- seq(pu[1], pu[2], len = len)
     y <- predict(p, x)
@@ -44,7 +53,9 @@ lines.polynomial <- function(p, len = 100, ...) {
     lines(x, y, ...)
 }
 
-monic <- function(p) {
+monic <-
+function(p)
+{
     p <- unclass(p)
     if(all(p == 0)) {
         warning("the zero polynomial has no monic form")
@@ -53,8 +64,11 @@ monic <- function(p) {
     polynomial(p/p[length(p)])
 }
 
-plot.polynomial <- function(p, xlim = 0:1, ylim = range(Px), 
-			    type = "l", len = 100,...) {
+plot.polynomial <-
+function(x, xlim = 0:1, ylim = range(Px), 
+         type = "l", len = 100, ...)
+{
+    p <- x                              # generic/method
     if(missing(xlim))
         xlim <- range(Re(unlist(summary(p))))
     if(any(is.na(xlim))) {
@@ -76,7 +90,10 @@ plot.polynomial <- function(p, xlim = 0:1, ylim = range(Px),
     plot(x, Px, type = type, xlim = xlim, ylim = ylim, ...)
 }
 
-points.polynomial <- function(p, length = 100, ...) {
+points.polynomial <-
+function(x, length = 100, ...)
+{
+    p <- x                              # generic/method
     pu <- par("usr")
     x <- seq(pu[1], pu[2], len = length)
     y <- predict(p, x)
@@ -85,8 +102,9 @@ points.polynomial <- function(p, length = 100, ...) {
     points(x, y, ...)
 }
 
-poly.calc <- function(x, y, tol = sqrt(.Machine$double.eps),
-                      lab = dimnames(y)[[2]]) {
+poly.calc <-
+function(x, y, tol = sqrt(.Machine$double.eps), lab = dimnames(y)[[2]])
+{
     if(missing(y)) {
         p <- 1
         for(xi in x)
@@ -126,7 +144,10 @@ poly.from.zeros <- function(...) poly.calc(unlist(list(...)))
 poly.from.roots <- .Alias(poly.from.zeros)
 poly.from.values <- .Alias(poly.calc)
 
-predict.polynomial <- function(p, newdata, ...) {
+predict.polynomial <-
+function(object, newdata, ...)
+{
+    p <- object                         # generic/method    
     v <- 0
     p <- rev(unclass(p))
     for(pj in p)
@@ -134,7 +155,9 @@ predict.polynomial <- function(p, newdata, ...) {
     v
 }
 
-print.summary.polynomial <- function(x, ...) {
+print.summary.polynomial <-
+function(x, ...)
+{
     cat("\n Summary information for:\n")
     print(attr(x, "originalPolynomial"))
     cat("\n Zeros:\n")
@@ -146,7 +169,9 @@ print.summary.polynomial <- function(x, ...) {
     invisible(x)
 }
 
-solve.polynomial <- function(a, b, ...) {
+solve.polynomial <-
+function(a, b, ...)
+{
     if(!missing(b)) 
         a <- a - b
     a <- unclass(a)
@@ -170,7 +195,9 @@ solve.polynomial <- function(a, b, ...) {
        })
 }
 
-summary.polynomial <- function(object, ...) {
+summary.polynomial <-
+function(object, ...)
+{
     dp <- deriv(object)
     structure(list(zeros = solve(object),
                    stationaryPoints = solve(dp), 

@@ -47,11 +47,11 @@ function(e1, e2)
                        q <- rev(e2)
                        r <- rep(0, length(p))
                        i <- 0
-                       while(length(p) >= length(q)) {
+                       while(length(p) >= l2) {
                            i <- i + 1
                            d <- p[1]/q[1]
                            r[i] <- d
-                           p[1:lq] <- p[1:lq] - d * q
+                           p[1:l2] <- p[1:l2] - d * q
                            p <- p[-1]
                        }
                        if(i == 0) 0 else r[i:1]
@@ -76,9 +76,9 @@ function(e1, e2)
                    else {
                        p <- rev(e1)
                        q <- rev(e2)
-                       while(length(p) >= length(q)) {
+                       while(length(p) >= l2) {
                            d <- p[1]/q[1]
-                           p[1:lq] <- p[1:lq] - d * q
+                           p[1:l2] <- p[1:l2] - d * q
                            p <- p[-1]
                        }
                        if(length(p) == 0) 0 else rev(p)

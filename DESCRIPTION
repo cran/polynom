@@ -1,5 +1,5 @@
 Package: polynom
-Version: 1.1-11
+Version: 1.1-12
 Author: S original by Bill Venables <Bill.Venables@adelaide.edu.au>.
   Packaged for R by Kurt Hornik <Kurt.Hornik@R-project.org> and
   Martin Maechler <maechler@stat.math.ethz.ch>.
@@ -9,3 +9,4 @@ Description: A collection of functions to implement a class for univariate
 Title: A collection of functions to implement a class for univariate
  polynomial manipulations
 License: GPL
+Packaged: Sat Jan 31 13:32:44 2004; hornik

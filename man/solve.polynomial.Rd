@@ -1,28 +1,31 @@
 \name{solve.polynomial}
 \alias{solve.polynomial}
 \title{Zeros of a Polynomial}
+\description{
+  Find the zeros, if any, of a given polynomial.
+}
 \usage{
-solve.polynomial(p)
+\method{solve}{polynomial}(a, b, \dots)
 }
 \arguments{
-    \item{p}{A polynomial object for which the zeros are required.}
+  \item{a}{A polynomial object for which the zeros are required.}
+  \item{b}{a numeric value specifying an additional intercept.  If
+    given, the zeros of \code{a - b} are found.}
+  \item{\dots}{Not used by this method.}
 }
 \value{
-    A numeric vector, generally complex, of zeros.
-}
-\description{
-    Find the zeros, if any, of a given polynomial.
+  A numeric vector, generally complex, of zeros.
 }
 \details{
-    This is a method for the generic function \code{\link{solve}}.
+  This is a method for the generic function \code{\link{solve}}.
     
-    The zeros are found as the eigenvalues of the companion matrix,
-    sorted according to their real parts.
+  The zeros are found as the eigenvalues of the companion matrix,
+  sorted according to their real parts.
 }
 \seealso{
-    \code{\link{polyroot}},
-    \code{\link{poly.calc}},
-    \code{\link{summary.polynomial}}
+  \code{\link{polyroot}},
+  \code{\link{poly.calc}},
+  \code{\link{summary.polynomial}}
 }
 \examples{
 p <- polynomial(6:1)

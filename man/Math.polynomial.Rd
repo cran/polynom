@@ -1,29 +1,29 @@
 \name{Math.polynomial}
 \alias{Math.polynomial}
 \title{Math Group Methods for Polynomials}
+\description{
+  Group method for functions in the Math group.
+}
 \usage{
-Math.polynomial(x, digits)
+Math.polynomial(p, digits)
 }
 \arguments{
-    \item{x}{An object of class polynomial}
-    \item{digits}{Precision, as required by \code{round()} or
-	\code{signif()}}
-}
-\description{
-    Group method for functions in the Math group.
+  \item{p}{an object of class \code{"polynomial"}.}
+  \item{digits}{precision, as required by \code{round()} or
+    \code{signif()}.}
 }
 \details{
-    Most math group functions are disallowed with polynomial arguments.
-    The only exceptions are \code{\link{ceiling}}, \code{\link{floor}},
-    \code{\link{round}}, \code{\link{trunc}}, and \code{\link{signif}}
-    which may be used to transform the coefficients accordingly.
+  Most math group functions are disallowed with polynomial arguments.
+  The only exceptions are \code{\link{ceiling}}, \code{\link{floor}},
+  \code{\link{round}}, \code{\link{trunc}}, and \code{\link{signif}}
+  which may be used to transform the coefficients accordingly.
 }
 \value{
-    A polynomial with transformed coefficients.
+  A polynomial with transformed coefficients.
 }
 \seealso{
-    \code{\link{Ops.polynomial}},
-    \code{\link{Summary.polynomial}}.
+  \code{\link{Ops.polynomial}},
+  \code{\link{Summary.polynomial}}.
 }
 \examples{
 op <- options(digits=18)

@@ -6,6 +6,9 @@
 \alias{print.polynomial}
 \alias{coef.polynomial}
 \title{Polynomials}
+\description{
+  Construct, coerce to and test for polynomial objects.
+}
 \usage{
 polynomial(coef = c(0, 1))
 as.polynomial(p)
@@ -15,9 +18,6 @@ is.polynomial(p)
   \item{coef}{numeric vector, giving the polynomial coefficients in
     \emph{in}creasing order.}
   \item{p}{an arbitrary \R object.}
-}
-\description{
-  Construct, coerce to and test for polynomial objects.
 }
 \details{
   \code{polynomial} constructs a polynomial from its coefficients,

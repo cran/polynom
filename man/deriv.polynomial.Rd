@@ -1,24 +1,24 @@
 \name{deriv.polynomial}
 \alias{deriv.polynomial}
 \title{Differentiate a Polynomial}
+\description{
+  Calculates the derivative of a univariate polynomial.
+}
 \usage{
-deriv.polynomial(p)
+\method{deriv}{polynomial}(expr)
 }
 \arguments{
-    \item{p}{Object of class polynomial}
-}
-\description{
-    Calculates the derivative of a univariate polynomial.
+  \item{expr}{an object of class \code{"polynomial"}.}
 }
 \details{
-    This is a method for the generic function \code{\link{deriv}}.
+  This is a method for the generic function \code{\link{deriv}}.
 }
 \value{
-    Derivative of the polynomial.
+  Derivative of the polynomial.
 }
 \seealso{
-    \code{\link{integral.polynomial}},
-    \code{\link{deriv}}.
+  \code{\link{integral.polynomial}},
+  \code{\link{deriv}}.
 }
 \examples{
 pr <- poly.calc(1:5)

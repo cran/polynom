@@ -2,23 +2,23 @@
 \alias{summary.polynomial}
 \alias{print.summary.polynomial}
 \title{Summary of a Polynomial}
+\description{
+  Summarize a polynomial by describing its ``key'' points.
+}
 \usage{
-summary.polynomial(p)
+\method{summary}{polynomial}(object, \dots)
 }
 \arguments{
-    \item{p}{A polynomial object.}
+  \item{object}{an object of class \code{"polynomial"}.}
+  \item{\dots}{Not used by this method.}
 }
 \value{
-    A list of class \code{summary.polynomial} (which has its own
-    \code{print} method) containing information on zeros, stationary and
-    inflexion points.
-}
-\description{
-    Summarize a polynomial by describing its ``key'' points.
+  A list of class \code{"summary.polynomial"} (which has its own
+  \code{print} method) containing information on zeros, stationary and
+  inflexion points.
 }
 \details{
-    This is a method for the generic function \code{\link{summary}}.
-}
+  This is a method for the generic function \code{\link{summary}}.
 }
 \examples{
 p <- polynomial(6:1)

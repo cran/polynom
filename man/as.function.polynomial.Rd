@@ -1,33 +1,32 @@
 \name{as.function.polynomial}
 \alias{as.function.polynomial}
 \title{Coerce a Polynomial to a Function}
+\description{
+  Takes a polynomial argument and constructs an \R function to evaluate
+  it at arbitrary points.
+}
 \usage{
-as.function.polynomial(p)
+\method{as.function}{polynomial}(p)
 }
 \arguments{
-    \item{p}{An object of class polynomial}
-}
-\description{
-    Takes a polynomial argument and constructs an \R function to
-    evaluate it at arbitrary points.
+  \item{p}{An object of class \code{"polynomial"}.}
 }
 \details{
-    This is a method for the generic function
-    \code{\link{as.function}}.
+  This is a method for the generic function \code{\link{as.function}}.
 
-    The polynomial is evaluated within the function using the Horner
-    scheme.
+  The polynomial is evaluated within the function using the Horner
+  scheme.
 
-    Note that you can use the model-oriented \code{predict} method for
-    polynomials for purpose of evaluation (without explicit coercion to
-    a function), see the example below.}
+  Note that you can use the model-oriented \code{predict} method for
+  polynomials for purpose of evaluation (without explicit coercion to
+  a function), see the example below.}
 }
 \value{
-    A function to evaluate the polynomial \code{p}.
+  A function to evaluate the polynomial \code{p}.
 }
 \seealso{
-    \code{\link{as.function}},
-    \code{\link{predict.polynomial}}
+  \code{\link{as.function}},
+  \code{\link{predict.polynomial}}
 }
 \examples{
 pr <- (poly.calc(-1:1) - 2 * polynomial(c(1, 2, 1)))^2

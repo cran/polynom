@@ -165,11 +165,12 @@ solve.polynomial <- function(a, b, ...) {
 	   a <- rev(unclass(a))
 	   a <- (a/a[1])[-1]
 	   M <- rbind( - a, cbind(diag(length(a) - 1), 0))
-	   sort(c(r, eigen(M, symmetric = F, only.values = T)$values))
+	   sort(c(r, eigen(M, symmetric = FALSE,
+                           only.values = TRUE)$values))
        })
 }
 
-summary.polynomial <- function(object) {
+summary.polynomial <- function(object, ...) {
     dp <- deriv(object)
     structure(list(zeros = solve(object),
                    stationaryPoints = solve(dp), 

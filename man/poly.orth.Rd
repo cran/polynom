@@ -1,25 +1,25 @@
 \name{poly.orth}
 \alias{poly.orth}
 \title{Construct Orthogonal Polynomials}
+\description{
+  Construct the orthogonal polynomials on a given vector, up to a
+  specified degree.
+}
 \usage{
 poly.orth(x, degree = length(unique(x)) - 1, norm = TRUE)
 }
 \arguments{
-    \item{x}{A numeric vector of abscissae.  When evaluated at \code{x}
-	the polynomials will generate an orthonormal set.}
-    \item{degree}{Maximum degree requried.  The default is one fewer
-	than the number of distinct values in \code{x}, which is maximum
-	possible.}
-    \item{norm}{a logical indicating whether the polynomials should be
-	normalized.}
-}
-\description{
-    Construct the orthogonal polynomials on a given vector, \code{x}, up
-    to a specified degree.
+  \item{x}{a numeric vector of abscissae.  When evaluated at \code{x}
+    the polynomials will generate an orthonormal set.}
+  \item{degree}{maximum degree requried.  The default is one fewer than
+    the number of distinct values in \code{x}, which is maximum
+    possible.}
+  \item{norm}{a logical indicating whether the polynomials should be
+    normalized.}
 }
 \value{
-    A list of class \code{"polylist"} of objects of class
-    \code{"polynomial"} of degree 1, 2, \dots, \code{degree}.
+  A list of class \code{"polylist"} of objects of class
+  \code{"polynomial"} of degree 1, 2, \dots, \code{degree}.
 }
 \examples{
 x <- rep(1:4, 1:4)		# x with repetitions for weighting

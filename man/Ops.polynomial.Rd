@@ -1,23 +1,23 @@
 \name{Ops.polynomial}
 \alias{Ops.polynomial}
 \title{Arithmetic Ops Group Methods for Polynomials}
+\description{
+  Allows arithmetic operators to be used for polynomial calculations,
+  such as addition, multiplication, division, etc.
+}
 \usage{
 Ops.polynomial(e1, e2)
 }
 \arguments{
-    \item{e1}{A polynomial}
-    \item{e2}{A polynomial}
-}
-\description{
-    Allows arithmetic operators to be used for polynomial calculations,
-    such as addition, multiplication, division, etc.
+  \item{e1}{an object of class \code{"polynomial"}.}
+  \item{e2}{an object of class \code{"polynomial"}.}
 }
 \value{
-    A polynomial got by performing the operation on the two arguments.
+  A polynomial got by performing the operation on the two arguments.
 }
 \seealso{
-    \code{\link{Math.polynomial}},
-    \code{\link{Summary.polynomial}}.
+  \code{\link{Math.polynomial}},
+  \code{\link{Summary.polynomial}}.
 }
 \examples{
 p <- polynomial(c(1, 2, 1))

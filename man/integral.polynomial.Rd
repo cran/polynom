@@ -2,23 +2,24 @@
 \alias{integral}
 \alias{integral.polynomial}
 \title{Integrate a Polynomial}
+\description{
+  Find the integral of a univariate polynomial.
+}
 \usage{
-integral(p, limits = NULL, ...)
+\method{integral}{polynomial}(expr, limits = NULL, ...)
 }
 \arguments{
-    \item{p}{Object of class polynomial.}
-    \item{limits}{numeric vector of length 2 giving the integration
-	limits.}
-}
-\description{
-    Find the integral of a univariate polynomial.
+  \item{expr}{an object of class \code{"polynomial"}.}
+  \item{limits}{numeric vector of length 2 giving the integration
+    limits.}
+  \item{\dots}{further arguments to be passed to or from methods.}
 }
 \value{
-    If \code{limits} is not given, the integral of \code{p} from 0 to
-    `x'.  Otherwise, the integral with the given integration limits.}
+  If \code{limits} is not given, the integral of \code{p} from 0 to
+  `x'.  Otherwise, the integral with the given integration limits.}
 }
 \seealso{
-    \code{\link{deriv.polynomial}}
+  \code{\link{deriv.polynomial}}
 }
 \examples{
 p <- poly.calc(1:5)

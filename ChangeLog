@@ -1,3 +1,11 @@
+2002-05-05  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.1-10.
+
+	* man/zSummary.polynomial.Rd: Cannot have 'Summary.polynomial.Rd'
+	and 'summary.polynomial.Rd' under Windows, hence rename the file
+	documenting the group methods.
+
 2002-05-02  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
 
 	* DESCRIPTION (Version): New version is 1.1-9.

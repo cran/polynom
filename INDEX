@@ -1,6 +1,5 @@
 Math.polynomial         Math Group Methods for Polynomials
 Ops.polynomial          Arithmetic Ops Group Methods for Polynomials
-Summary.polynomial      Summary Group Methods for Polynomials
 as.function.polynomial
                         Coerce a Polynomial to a Function
 change.origin           Change Origin for a Polynomial
@@ -17,3 +16,4 @@ polynomial              Polynomials
 predict.polynomial      Evaluate a Polynomial
 solve.polynomial        Zeros of a Polynomial
 summary.polynomial      Summary of a Polynomial
+zSummary.polynomial     Summary Group Methods for Polynomials

@@ -22,8 +22,8 @@ is.polynomial(p)
 \details{
   \code{polynomial} constructs a polynomial from its coefficients,
   i.e., \code{p[1:k]} specifies the polynomial
-  \deqn{p_1 + p_2 x + p_3 x^2 + \dots + p_k x^{k-1}}%
-  {p[1] + p[2]* x + p[3]* x^2 + ... + p[k]* x^(k-1)}.
+  \deqn{p_1 + p_2 x + p_3 x^2 + \dots + p_k x^{k-1}}{p[1] + p[2]* x +
+    p[3]* x^2 + ... + p[k]* x^(k-1)}.
   Internally, polynomials are simply numeric coefficient vectors of
   class \code{"polynomial"}.  Several useful methods are available for
   this class, such as coercion to character and function, extraction of

@@ -1,3 +1,17 @@
+2000-12-24  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.1-5.
+	(Maintainer): New entry.
+
+2000-12-19  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.1-4.
+	(Title): Added.
+
+	* TITLE: Removed.
+
+	* man/polynomial.Rd: Work around Rdconv problem.
+
 Tue Dec 28 19:35:22 1999  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
 
 	* DESCRIPTION (Version): New version is 1.1-3.

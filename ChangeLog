@@ -1,0 +1,83 @@
+Sun Apr 11 01:29:22 1999  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.1-2.
+
+	* man/poly.orth.Rd: Fix syntax error in the example.
+
+Sun Mar  7 19:59:51 1999  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.1-1.  Major overhaul.
+
+	* R/polybase.R: New base file, based on V&R MASS2 ch04 scripts
+	with minimal changes.
+
+	* R/polylist.R: New file containing all "polylist" stuff.
+	* R/polyxtra.R: New file containing all other extra stuff.
+	Both files based on the most recent versions of BVs package,
+	without support for style and variable attributes etc.
+
+	* man/*.Rd: Updated, reindented.
+
+	* man/poly.calc.Rd: New file.
+	* man/predict.polynomial.Rd: New file.
+	* man/solve.polynomial.Rd: New file.
+	* man/summary.polynomial.Rd: New file.
+	
+	* man/make.character.polynomial.Rd: Deleted (function no longer in
+	the package).
+	* man/poly.from.values.Rd: Deleted (now poly.calc()).
+	* man/poly.from.zeros.Rd: Deleted (now poly.calc)).
+	* man/poly.value.Rd: Deleted (now predict.polynomial()).
+
+Thu Dec  3 13:43:49 1998  Martin Maechler <maechler@stat....>
+
+	* DESCRIPTION (Version): New version is 1.0-8.
+
+	* man/polynomial.Rd: NEW
+	* man/make.character.polynomial.Rd: examples executable
+	* man/*.Rd: Add \keyword{symbolmath}, add \alias{.}
+
+Tue Dec  1 12:39:49 1998  Martin Maechler <maechler@stat....>
+
+	* R/zzz.R: "nam" instead of "nm"
+
+Tue Dec  1 12:10:27 1998  Martin Maechler <maechler@stat....>
+
+	* R/zzz.R: Drop as.expression[.default]; is in R base.
+	* R/polynom.R (and zzz.R): Re-indented; TRUE/FALSE.
+
+Sat May  9 10:24:06 1998  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.0-7.
+
+	* R/zzz.R: No longer make as.function() and solve() generic (now
+	done in the R distribution).
+
+Tue May  5 12:51:17 1998  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.0-6.
+
+	* R/zzz.R: Make as.expression() and as.function() generic.
+	Add a version of as.function.polynomial() which works under R.
+	Make solve() generic, and add solve.polynomial() by BV.
+
+Tue Feb 24 23:23:21 1998  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION: New version is 1.0-5.  Now released under GPL.
+
+	* README: Copyright now is with KH.
+
+Sun Feb 22 10:00:47 1998  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION: New file; new version is 1.0-4.
+
+	* VERSION: Removed.
+
+Wed Sep 17 12:25:18 1997  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* VERSION: New version is 1.0-3.
+
+	* man: All man sources converted to new Rd format.
+
+	* ChangeLog: Finally started.
+

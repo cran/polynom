@@ -1,3 +1,9 @@
+2001-11-27  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.1-8.
+
+	* R/polyxtra.R: .Alias() is gone in R 1.4.0, hence remove.
+
 2001-08-20  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
 
 	* DESCRIPTION (Version): New version is 1.1-7.

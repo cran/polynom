@@ -6,13 +6,13 @@ change.origin            Change Origin for a Polynomial
 deriv.polynomial         Differentiate a Polynomial
 integral.polynomial      Integrate a Polynomial
 lines.polynomial         Lines Method for Polynomials
-solve.polynomial         Zeros of a Polynomial
 monic                    Monic Polynomials
 plot.polynomial          Plot Method for Polynomials
 points.polynomial        Points Method for Polynomials
 poly.calc                Calculate Polynomials from Zeros or Values
-summary.polynomial       Summary of a Polynomial
 poly.orth                Construct Orthogonal Polynomials
+polylist                 Lists of Polynomials
 polynomial               Polynomials
 predict.polynomial       Evaluate a Polynomial
-polylist                 Lists of Polynomials
+solve.polynomial         Zeros of a Polynomial
+summary.polynomial       Summary of a Polynomial

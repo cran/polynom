@@ -141,8 +141,8 @@ function(x, y, tol = sqrt(.Machine$double.eps), lab = dimnames(y)[[2]])
 }
 
 poly.from.zeros <- function(...) poly.calc(unlist(list(...)))
-poly.from.roots <- .Alias(poly.from.zeros)
-poly.from.values <- .Alias(poly.calc)
+poly.from.roots <- poly.from.zeros
+poly.from.values <- poly.calc
 
 predict.polynomial <-
 function(object, newdata, ...)

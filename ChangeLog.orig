@@ -1,13 +1,3 @@
-2004-03-03  Martin Maechler  <maechler@stat.math.ethz.ch>
-
-	* DESCRIPTION (Date): added
-	* DESCRIPTION (Version): New version is 1.1-13.
-
-	* R/polybase.R (as.character.polynomial): new argument
-		'decreasing = FALSE';  faster rep.int() instead of rep().
-	* R/polybase.R (print.polynomial): new arguments 'digits', 'decreasing'
-	* man/polynomial.Rd: ditto
-
 2004-01-31  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
 
 	* DESCRIPTION (Version): New version is 1.1-12.
@@ -63,7 +53,7 @@
 
 	* DESCRIPTION (Version): New version is 1.1-6.
 
-	* man/*.Rd:
+	* man/*.Rd: 
 	Codoc fixes.
 
 2000-12-24  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
@@ -115,7 +105,7 @@ Sun Mar  7 19:59:51 1999  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>
 	* man/predict.polynomial.Rd: New file.
 	* man/solve.polynomial.Rd: New file.
 	* man/summary.polynomial.Rd: New file.
-
+	
 	* man/make.character.polynomial.Rd: Deleted (function no longer in
 	the package).
 	* man/poly.from.values.Rd: Deleted (now poly.calc()).

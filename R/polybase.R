@@ -18,19 +18,19 @@ function(e1, e2)
 {
     if(missing(e2))
         return(switch(.Generic,
-                      "+" = e1, 
+                      "+" = e1,
                       "-" = polynomial(NextMethod(.Generic)),
                       stop("unsupported unary operation")))
     e1 <- unclass(e1)
     e2 <- unclass(e2)
     l1 <- length(e1)
     l2 <- length(e2)
-    e1.op.e2 <- 
+    e1.op.e2 <-
         switch(.Generic,
                "+" = ,
                "-" = {
-                   e1 <- c(e1, rep(0, max(0, l2 - l1)))
-                   e2 <- c(e2, rep(0, max(0, l1 - l2)))
+                   e1 <- c(e1, rep.int(0, max(0, l2 - l1)))
+                   e2 <- c(e2, rep.int(0, max(0, l1 - l2)))
                    NextMethod(.Generic)
                },
                "*" = if(l1 == 1 || l2 == 1) e1 * e2 else {
@@ -45,7 +45,7 @@ function(e1, e2)
                    else {
                        p <- rev(e1)
                        q <- rev(e2)
-                       r <- rep(0, length(p))
+                       r <- rep.int(0, length(p))
                        i <- 0
                        while(length(p) >= l2) {
                            i <- i + 1
@@ -106,21 +106,19 @@ function(x, ...)
            stop(paste(.Generic, "unsupported for polynomials")))
 }
 
-as.character.polynomial <-
-function(p)
+as.character.polynomial <- function(x, decreasing = FALSE, ...)
 {
-    p <- unclass(p)
+    p <- unclass(x)
     lp <- length(p) - 1
     names(p) <- 0:lp
     p <- p[p != 0]
 
     if(length(p) == 0) return("0")
 
+    if(decreasing) p <- rev(p)
+
     signs <- ifelse(p < 0, "- ", "+ ")
-    if(signs[1] == "- ")
-        signs[1] <- "-"
-    else
-        signs[1] <- ""
+    signs[1] <- if(signs[1] == "- ") "-" else ""
 
     np <- names(p)
     p <- as.character(abs(p))
@@ -129,30 +127,29 @@ function(p)
     pow <- paste("x^", np, sep = "")
     pow[np == "0"] <- ""
     pow[np == "1"] <- "x"
-    stars <- rep("*", length(p))
+    stars <- rep.int("*", length(p))
     stars[p == "" | pow == ""] <- ""
     paste(signs, p, stars, pow, sep = "", collapse = " ")
 }
 
 print.polynomial <-
-function(x, ...)
+function(x, digits = getOption("digits"), decreasing = FALSE, ...)
 {
-    p <- as.character.polynomial(signif(x, 
-                                        digits =
-                                        options("digits")$digits))
+    p <- as.character.polynomial(signif(x, digits = digits),
+                                 decreasing = decreasing)
     pc <- nchar(p)
-    ow <- max(35, options("width")$width)
+    ow <- max(35, getOption("width"))
     m2 <- 0
     while(m2 < pc) {
         m1 <- m2 + 1
         m2 <- min(pc, m2 + ow)
         if(m2 < pc)
-            while(substring(p, m2, m2) != " " && m2 > m1 + 1) 
+            while(substring(p, m2, m2) != " " && m2 > m1 + 1)
                 m2 <- m2 - 1
         cat(substring(p, m1, m2), "\n")
     }
     invisible(x)
-}  
+}
 
 as.function.polynomial <-
 function(x, ...)
@@ -182,7 +179,7 @@ function(x, degree = length(unique(x)) - 1, norm = TRUE)
     x <- polynomial()
     p <- list(polynomial(0), polynomial(1))
     for(j in 1:degree)
-        p[[j + 2]] <- 
+        p[[j + 2]] <-
             (x - a[j]) * p[[j + 1]] - N[j + 1]/N[j] * p[[j]]
     p <- p[-1]
     if(norm) {

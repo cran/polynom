@@ -96,17 +96,6 @@ Math.polynomial <- function(p, digits) {
            stop(paste(.Generic, "unsupported for polynomials")))
 }
 
-horner <- function(p) {
-    a <- as.character(rev(unclass(p)))
-    h <- a[1]
-    while(length(a <- a[-1]) > 0) {
-        h <- paste("x*(", h, ")", sep = "")
-        if(a[1] != 0)
-            h <- paste(a[1], " + ", h, sep = "")
-    }
-    h
-}
-
 as.character.polynomial <- function(p) {
     p <- unclass(p)
     lp <- length(p) - 1
@@ -152,11 +141,20 @@ print.polynomial <- function(p0, ...) {
 }  
 
 as.function.polynomial <- function(p) {
+    horner <- function(p) {
+        a <- as.character(rev(unclass(p)))
+        h <- a[1]
+        while(length(a <- a[-1]) > 0) {
+            h <- paste("x*(", h, ")", sep = "")
+            if(a[1] != 0)
+                h <- paste(a[1], " + ", h, sep = "")
+        }
+        h
+    }
     f <- function(x) NULL
     body(f) <- parse(text = horner(p))[[1]]
     f
 }
-
 
 poly.orth <- function(x, degree = length(unique(x)) - 1, norm = TRUE) {
     at <- attr(poly(x, degree), "coefs")

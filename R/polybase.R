@@ -38,7 +38,7 @@ function(e1, e2)
                    as.vector(tapply(m, row(m) + col(m), sum))
                },
                "/" = {
-                   if(e2 == 0)
+                   if(l2 == 0)
                        stop("unsupported polynomial division")
                    if(l2 == 1)
                        e1 / e2
@@ -58,7 +58,7 @@ function(e1, e2)
                    }
                },
                "^" = {
-                   if(e2 < 0 || e2 %% 1 != 0)
+                   if(l2 != 1 || e2 < 0 || e2 %% 1 != 0)
                        stop("unsupported polynomial power")
                    switch(as.character(e2),
                           "0" = 1,

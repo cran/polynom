@@ -16,7 +16,8 @@
 }
 \value{
   If \code{limits} is not given, the integral of \code{p} from 0 to
-  `x'.  Otherwise, the integral with the given integration limits.}
+  \sQuote{x}'.  Otherwise, the integral with the given integration
+  limits.
 }
 \seealso{
   \code{\link{deriv.polynomial}}

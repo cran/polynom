@@ -20,7 +20,7 @@
 
   Note that you can use the model-oriented \code{predict} method for
   polynomials for purpose of evaluation (without explicit coercion to
-  a function), see the example below.}
+  a function), see the example below.
 }
 \value{
   A function to evaluate the polynomial \code{p}.

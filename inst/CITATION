@@ -1,0 +1,28 @@
+citHeader("To cite in publications use:")
+
+citEntry(entry = "Manual",
+	 title = {
+             paste("polynom: A Collection of Functions to Implement",
+                   "a Class for Univariate Polynomial Manipulations")
+         },
+	 author = personList(
+           person(first = "Bill", last = "Venables",
+                  email = "Bill.Venables@adelaide.edu.au"),
+           person(first = "Kurt", last = "Hornik",
+                  email = "Kurt.Hornik@R-project.org"),
+           person(first = "Martin", last = "Maechler",
+                  email = "maechler@stat.math.ethz.ch")),
+         year = 2006,
+	 note = {
+             paste("R package version 1.2-1.",
+                   "S original by Bill Venables, packages for R",
+                   "by Kurt Hornik and Martin Maechler.")
+         },
+	 url = "http://CRAN.R-project.org/",
+	 textVersion = {
+             paste("Bill Venables and Kurt Hornik and Martin Maechler",
+                   "(2006).",
+                   "polynom: A Collection of Functions to Implement",
+                   "a Class for Univariate Polynomial Manipulations.",
+                   "R package version 1.2-1.")
+         })

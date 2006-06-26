@@ -4,6 +4,7 @@ export("as.polynomial",
        "monic",
        "poly.calc", "poly.from.roots", "poly.from.values",
        "poly.from.zeros", "poly.orth", "polylist", "polynomial")
+
 S3method("Math", "polynomial")
 S3method("Ops", "polynomial")
 S3method("Summary", "polynomial")

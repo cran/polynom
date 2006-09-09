@@ -1,4 +1,5 @@
-importFrom("stats", "deriv")
+importFrom("stats", "deriv", "poly", "predict")
+importFrom("graphics", "lines", "par", "plot", "points")
 
 export("as.polynomial",
        "change.origin",

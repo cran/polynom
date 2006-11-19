@@ -15,7 +15,7 @@ change.origin(p, o)
 }
 \details{
   Let \eqn{P(x) = \sum_i p_i x^i} be a given polynomial and consider
-  writing \eqn{P(x) = sum_j q_j (x - o)^j}.  This function calculates
+  writing \eqn{P(x) = \sum_j q_j (x - o)^j}.  This function calculates
   the coefficients \eqn{q_j} and returns the result as a polynomial.
 }
 \value{

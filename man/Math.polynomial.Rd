@@ -5,7 +5,7 @@
   Group method for functions in the Math group.
 }
 \usage{
-Math.polynomial(x, \dots)
+\method{Math}{polynomial}(x, \dots)
 }
 \arguments{
   \item{x}{an object of class \code{"polynomial"}.}

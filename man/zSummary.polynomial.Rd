@@ -2,18 +2,26 @@
 \alias{Summary.polynomial}
 \title{Summary Group Methods for Polynomials}
 \description{
-  Allows summary functions to be used on polynomial arguments.
+  Allows summary group generics to be used on polynomial arguments.
 }
 \usage{
-Summary.polynomial(x, \dots)
+\method{Summary}{polynomial}(\dots, na.rm = FALSE)
 }
 \arguments{
-  \item{x}{an object of class \code{"polynomial"}.}
-  \item{\dots}{optional additional arguments.}
+  \item{\dots}{\R objects, the first supplied of class
+    \code{"polynomial"}.} 
+  \item{na.rm}{logical: should missing values be removed?}
 }
 \details{
-  Summary functions on polynomials do not make very much sense, so an
-  error is returned.
+  For the \code{sum} and \code{prod} functions, the sum and product of
+  the given polynomials, respectively.  For the other members of the
+  Summary group, an error is returned.
+
+  Note that one could \emph{order} polynomials by divisibility, and
+  define \code{min} and \code{max} as the corresponding lattice meet and
+  join, i.e., the greatest common divisor and the least common multiple,
+  respectively.  This is currently not provided: instead, functions
+  \code{\link{GCD}} and \code{\link{LCM}} should be called directly.
 }
 \seealso{
   \code{\link{Math.polynomial}},

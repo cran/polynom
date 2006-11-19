@@ -6,7 +6,7 @@
   such as addition, multiplication, division, etc.
 }
 \usage{
-Ops.polynomial(e1, e2)
+\method{Ops}{polynomial}(e1, e2)
 }
 \arguments{
   \item{e1}{an object of class \code{"polynomial"}.}

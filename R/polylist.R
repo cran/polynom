@@ -1,8 +1,21 @@
 polylist <-
 function(...)
+    .polylist_from_list(list(...))
+
+.polylist_from_list <-
+function(x)
+    structure(lapply(x, as.polynomial), class = "polylist")
+
+is.polylist <-
+function(x)
+    inherits(x, "polylist")
+
+as.polylist <-
+function(x)
 {
-    P <- lapply(list(...), as.polynomial)
-    structure(P, class = "polylist")
+    if(is.polylist(x)) x
+    else if(is.list(x)) .polylist_from_list(x)
+    else polylist(x)
 }
 
 deriv.polylist <-
@@ -58,3 +71,33 @@ function(x, ...)
     NextMethod()
     invisible(y)
 }
+
+c.polylist <-
+function(..., recursive = FALSE)
+    .polylist_from_list(unlist(lapply(list(...), as.polylist),
+                               recursive = FALSE))
+
+"[.polylist" <-
+function(x, i)
+    .polylist_from_list(NextMethod("["))
+
+rep.polylist <-
+function(x, times, ...)
+    .polylist_from_list(NextMethod("rep"))
+
+unique.polylist <-
+function(x, incomparables = FALSE, ...)
+    .polylist_from_list(NextMethod("unique"))
+
+Summary.polylist <-
+function(..., na.rm = FALSE)
+{
+    ok <- switch(.Generic, sum = , prod = TRUE, FALSE)
+    if(!ok)
+        stop(gettextf("Generic '%s' not defined for \"%s\" objects.",
+                      .Generic, .Class))
+    switch(.Generic,
+           "sum" = accumulate("+", as.polynomial(0), c(...)),
+           "prod" = accumulate("*", as.polynomial(1), c(...)))
+}
+

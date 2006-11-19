@@ -89,11 +89,19 @@ function(e1, e2)
                stop("unsupported operation on polynomials"))
     polynomial(e1.op.e2)
 }
+
 Summary.polynomial <-
-function(x, ...)
+function(..., na.rm = FALSE)
 {
-    stop(paste(.Generic, "invalid for polynomials"))
+    ok <- switch(.Generic, sum = , prod = TRUE, FALSE)
+    if(!ok)
+        stop(gettextf("Generic '%s' not defined for \"%s\" objects.",
+                      .Generic, .Class))
+    switch(.Generic,
+           "sum" = accumulate("+", as.polynomial(0), polylist(...)),
+           "prod" = accumulate("*", as.polynomial(1), polylist(...)))
 }
+
 Math.polynomial <-
 function(x, ...)
 {

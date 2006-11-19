@@ -1,3 +1,24 @@
+2006-11-19  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* DESCRIPTION (Version): New version is 1.3-0.
+
+2006-11-18  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* R/polyxtra.R: New function gcd() and lcm() for computing the
+	greatest common divisor and least common multiple of a family of
+	polynomials.
+
+	* R/polybase.R (Summary.polynomial): Add sum and prod summary
+	methods for polynomials.
+
+	* R/polylist.R: Add coercion and test functions for polylists, as
+	well as Summary, c, rep, unique, and subscript methods.
+
+2006-11-16  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* R/polyxtra.R (plot.polynomial): Sync code with docs.
+	Spotted by Tamas K Papp <tpapp@Princeton.EDU>.
+
 2006-09-09  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
 
 	* DESCRIPTION (Version): New version is 1.2-3.

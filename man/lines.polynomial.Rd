@@ -5,11 +5,12 @@
   Add a polynomial to an existing plot usually as a line plot.
 }
 \usage{
-\method{lines}{polynomial}(x, len = 100, \dots)
+\method{lines}{polynomial}(x, len = 100, xlim = NULL, ylim = NULL, \dots)
 }
 \arguments{
   \item{x}{an object of class \code{"polynomial"}.}
   \item{len}{size of vector at which evaluations are to be made.}
+  \item{xlim, ylim}{the range of x and y values with sensible defaults.}  
   \item{\dots}{additional arguments as for the \code{\link{lines}}
     generic.}
 }

@@ -36,8 +36,9 @@ is.polynomial(p)
   class \code{"polynomial"}.  Several useful methods are available for
   this class, such as coercion to character (\code{as.character()}) and
   function (\code{\link{as.function.polynomial}}), extraction of
-  the coefficients (\code{coef()}), printing (using \code{as.character})
-  and plotting (\code{\link{plot.polynomial}}).
+  the coefficients (\code{coef()}), printing (using \code{as.character}),
+  plotting (\code{\link{plot.polynomial}}), and computing sums and
+  products of arbitrarily many polynomials.
 
   \code{as.polynomial} tries to coerce its arguments to a polynomial.
 

@@ -43,13 +43,14 @@ function(expr, limits = NULL, ...)
 }
 
 lines.polynomial <-
-function(x, len = 100, ...)
+function(x, len = 100, xlim = NULL, ylim = NULL, ...)
 {
     p <- x                              # generic/method
-    pu <- par("usr")
-    x <- seq(pu[1], pu[2], len = len)
+    if(is.null(xlim)) xlim <- par("usr")[1:2]
+    if(is.null(ylim)) ylim <- par("usr")[3:4]
+    x <- seq(xlim[1], xlim[2], len = len)
     y <- predict(p, x)
-    y[y <= pu[3] | y >= pu[4]] <- NA
+    y[y <= ylim[1] | y >= ylim[2]] <- NA
     lines(x, y, ...)
 }
 
@@ -70,7 +71,7 @@ function(x, xlim = 0:1, ylim = range(Px),
 {
     p <- x                              # generic/method
     if(missing(xlim))
-        xlim <- range(Re(unlist(summary(p))))
+        xlim <- range(c(0, Re(unlist(summary(p)))))
     if(any(is.na(xlim))) {
         warning("summary of polynomial fails. Using nominal xlim")
         xlim <- 0:1
@@ -205,3 +206,50 @@ function(object, ...)
               class = "summary.polynomial",
               originalPolynomial = object)
 }
+
+.is_zero_polynomial <-
+function(x)
+    identical(x, as.polynomial(0))
+
+.degree <-
+function(x)
+    length(unclass(x)) - 1
+
+.GCD2 <-
+function(x, y)
+{
+    if(.is_zero_polynomial(y)) x
+    else if(.degree(y) == 0) as.polynomial(1)
+    else Recall(y, x %% y)
+}
+
+.LCM2 <-
+function(x, y)
+{
+    if(.is_zero_polynomial(x) || .is_zero_polynomial(y))
+        return(as.polynomial(0))
+    (x / .GCD2(x, y)) * y
+}
+
+GCD <- function(...)
+    UseMethod("GCD")
+
+GCD.polynomial <- function(...) {
+    args <- c.polylist(...)
+    if(length(args) < 2)
+        stop("Need at least two polynomials.")
+    accumulate(.GCD2, args[[1]], args[-1], FALSE)
+}
+GCD.polylist <- GCD.polynomial
+
+
+LCM <- function(...)
+    UseMethod("LCM")
+
+LCM.polynomial <- function(...) {
+    args <- c.polylist(...)
+    if(length(args) < 2)
+        stop("Need at least two polynomials.")
+    accumulate(.LCM2, args[[1]], args[-1], FALSE)
+}
+LCM.polylist <- LCM.polynomial

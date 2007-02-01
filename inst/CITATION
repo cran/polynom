@@ -1,5 +1,9 @@
 citHeader("To cite in publications use:")
 
+meta <- packageDescription("polynom")
+year <- sub("-.*", "", meta$Date)
+note <- sprintf("R package version %s.", meta$Version)
+
 citEntry(entry = "Manual",
 	 title = {
              paste("polynom: A Collection of Functions to Implement",
@@ -12,17 +16,17 @@ citEntry(entry = "Manual",
                   email = "Kurt.Hornik@R-project.org"),
            person(first = "Martin", last = "Maechler",
                   email = "maechler@stat.math.ethz.ch")),
-         year = 2006,
+         year = year,
 	 note = {
-             paste("R package version 1.2-1.",
+             paste(note,
                    "S original by Bill Venables, packages for R",
                    "by Kurt Hornik and Martin Maechler.")
          },
 	 url = "http://CRAN.R-project.org/",
 	 textVersion = {
              paste("Bill Venables and Kurt Hornik and Martin Maechler",
-                   "(2006).",
+	           sprintf("(%s).", year),
                    "polynom: A Collection of Functions to Implement",
                    "a Class for Univariate Polynomial Manipulations.",
-                   "R package version 1.2-1.")
+                   note)
          })

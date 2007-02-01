@@ -1,10 +1,18 @@
+2007-02-01  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* inst/CITATION: Get date/year and version from the package
+	metadata.
+
 2006-11-19  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
 
 	* DESCRIPTION (Version): New version is 1.3-0.
 
+	* R/polyxtra.R (lines.polynomial): Add arguments 'xlim' and 'ylim'
+	as suggested by Tamas K Papp <tpapp@Princeton.EDU>.
+
 2006-11-18  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
 
-	* R/polyxtra.R: New function gcd() and lcm() for computing the
+	* R/polyxtra.R: New function GCD() and LCM() for computing the
 	greatest common divisor and least common multiple of a family of
 	polynomials.
 

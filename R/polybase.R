@@ -162,19 +162,17 @@ function(x, digits = getOption("digits"), decreasing = FALSE, ...)
 as.function.polynomial <-
 function(x, ...)
 {
-    p <- x                              # generic/method
-    horner <- function(p) {
-        a <- as.character(rev(unclass(p)))
-        h <- a[1]
-        while(length(a <- a[-1]) > 0) {
-            h <- paste("x*(", h, ")", sep = "")
-            if(a[1] != 0)
-                h <- paste(a[1], " + ", h, sep = "")
-        }
-        h
+    a <- rev(coef(x))
+    w <- as.name("w")
+    v <- as.name("x")
+    ex <- call("{", call("<-", w, 0))
+    for(i in seq_along(a)) {
+        ex[[i + 2]] <- call("<-", w, call("+", a[1], call("*", v, w)))
+        a <- a[-1]
     }
+    ex[[length(ex) + 1]] <- w
     f <- function(x) NULL
-    body(f) <- parse(text = horner(p))[[1]]
+    body(f) <- ex
     f
 }
 

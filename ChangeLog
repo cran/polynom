@@ -1,3 +1,7 @@
+2009-01-05  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
+
+	* man/change.origin.Rd: Rd fixes.
+
 2007-07-12  Kurt Hornik  <Kurt.Hornik@wu-wien.ac.at>
 
 	* DESCRIPTION (Version): New version is 1.3-3.

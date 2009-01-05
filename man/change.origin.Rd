@@ -9,7 +9,7 @@
 change.origin(p, o)
 }
 \arguments{
-  \item{p}{an object of class \code{"polynomial}".} 
+  \item{p}{an object of class \code{"polynomial"}.}
   \item{o}{a numeric scalar representing the new origin on the original
     scale.}
 }

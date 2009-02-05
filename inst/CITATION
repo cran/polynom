@@ -23,7 +23,7 @@ citEntry(entry = "Manual",
                    "S original by Bill Venables, packages for R",
                    "by Kurt Hornik and Martin Maechler.")
          },
-	 url = "http://CRAN.R-project.org/",
+	 url = "http://CRAN.R-project.org/package=polynom",
 	 textVersion = {
              paste("Bill Venables and Kurt Hornik and Martin Maechler",
 	           sprintf("(%s).", year),

@@ -11,7 +11,7 @@ poly.orth(x, degree = length(unique(x)) - 1, norm = TRUE)
 \arguments{
   \item{x}{a numeric vector of abscissae.  When evaluated at \code{x}
     the polynomials will generate an orthonormal set.}
-  \item{degree}{maximum degree requried.  The default is one fewer than
+  \item{degree}{maximum degree required.  The default is one fewer than
     the number of distinct values in \code{x}, which is maximum
     possible.}
   \item{norm}{a logical indicating whether the polynomials should be

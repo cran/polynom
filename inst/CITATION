@@ -11,11 +11,11 @@ citEntry(entry = "Manual",
                    "a Class for Univariate Polynomial Manipulations")
          },
 	 author = personList(
-           person(first = "Bill", last = "Venables",
+           person("Bill", "Venables",
                   email = "Bill.Venables@adelaide.edu.au"),
-           person(first = "Kurt", last = "Hornik",
+           person("Kurt", "Hornik",
                   email = "Kurt.Hornik@R-project.org"),
-           person(first = "Martin", last = "Maechler",
+           person("Martin", "Maechler",
                   email = "maechler@stat.math.ethz.ch")),
          year = year,
 	 note = {

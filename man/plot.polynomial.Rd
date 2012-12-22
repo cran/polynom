@@ -11,8 +11,8 @@
 }
 \arguments{
   \item{x}{an object of class \code{"polynomial"}.}
-  \item{xlim}{the range to be encompased by the x axis.}
-  \item{ylim}{the range to be encompased by the y axis.}    
+  \item{xlim}{the range to be encompassed by the x axis.}
+  \item{ylim}{the range to be encompassed by the y axis.}    
   \item{type}{as for \code{\link{plot}()}.}
   \item{len}{number of x points drawn.}
   \item{\dots}{additional arguments as for \code{\link{plot}}.}

@@ -1,4 +1,4 @@
-importFrom("stats", "deriv", "poly", "predict")
+importFrom("stats", "coef", "deriv", "poly", "predict")
 importFrom("graphics", "lines", "par", "plot", "points")
 
 export("GCD", "LCM",

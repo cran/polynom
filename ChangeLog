@@ -1,3 +1,13 @@
+2016-12-08  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* DESCRIPTION: New version is 1.3-9.
+
+	* inst/CITATION: Canonicalize CRAN URLs.
+
+2016-01-06  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
+
+	* inst/CITATION: Avoid personList().
+
 2014-03-17  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
 
 	* DESCRIPTION (Version): New version is 1.3-8.

@@ -1,12 +1,12 @@
-69c3918d6ea8bb18ceb14fde10cec703 *ChangeLog
-fbcc44fe7ee5de5ce3d7f5de536e4476 *DESCRIPTION
+79df21023c3282a329cea3b00efd006c *ChangeLog
+75443f9725f11b457654368d4b6b784d *DESCRIPTION
 4ed3c25988a1a824b8a9fb612e579a48 *NAMESPACE
 3c25fb11384a12f61440f02510c255c8 *R/polybase.R
 3be886d8fc01ffbac0782ec77a030d0c *R/polylist.R
 30d3c4f02afd499401acbbdbba75855b *R/polyxtra.R
 b954bcbb4ec37c639320606dce6ef9bb *R/utils.R
 3d745afa5c949f279bd6da4bfc251882 *README
-ce622d86ec3868fb7bb5d600f6daf019 *inst/CITATION
+d3cb8b67966f6756a91500257fe0c67b *inst/CITATION
 b7a2315cf2ad37e3a203b1a9c754515a *man/Math.polynomial.Rd
 0b2f80b2fcdd445885ab6bdf150f5f47 *man/Ops.polynomial.Rd
 53693e01e80a9693d8128a6e079e4936 *man/as.function.polynomial.Rd

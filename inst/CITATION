@@ -10,7 +10,7 @@ citEntry(entry = "Manual",
              paste("polynom: A Collection of Functions to Implement",
                    "a Class for Univariate Polynomial Manipulations")
          },
-	 author = personList(
+	 author = c(
            person("Bill", "Venables",
                   email = "Bill.Venables@adelaide.edu.au"),
            person("Kurt", "Hornik",
@@ -23,7 +23,7 @@ citEntry(entry = "Manual",
                    "S original by Bill Venables, packages for R",
                    "by Kurt Hornik and Martin Maechler.")
          },
-	 url = "http://CRAN.R-project.org/package=polynom",
+	 url = "https://CRAN.R-project.org/package=polynom",
 	 textVersion = {
              paste("Bill Venables and Kurt Hornik and Martin Maechler",
 	           sprintf("(%s).", year),

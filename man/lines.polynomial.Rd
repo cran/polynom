@@ -5,7 +5,7 @@
   Add a polynomial to an existing plot usually as a line plot.
 }
 \usage{
-\method{lines}{polynomial}(x, len = 100, xlim = NULL, ylim = NULL, \dots)
+\method{lines}{polynomial}(x, len = 1000, xlim = NULL, ylim = NULL, \dots)
 }
 \arguments{
   \item{x}{an object of class \code{"polynomial"}.}

@@ -18,7 +18,7 @@ as.polylist(x)
 is.polylist(x)
 }
 \arguments{
-  \item{\dots}{a list of \R objects.}
+  \item{\dots}{\R objects, polynomials or capable of coercion to polynomials.}
   \item{x}{an \R object.}
 }
 \details{

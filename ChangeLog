@@ -1,3 +1,18 @@
+2019-03-21 Bill Venables <Bill.Venables@gmail.com>
+
+  * DESCRIPTION New version is 1.4-0.
+  New maintainer Bill Venables.  Various adjustments.
+
+  * NAMESPACE added grid to imports from graphics
+
+  * inst/CITATION: changes email address for Bill Venables.
+
+  * R minor changes to code and manual pages
+
+  * man minor changes to code and manual pages
+
+  * vignettes Added a vignette based on README
+
 2016-12-08  Kurt Hornik  <Kurt.Hornik@wu.ac.at>
 
 	* DESCRIPTION: New version is 1.3-9.
@@ -161,7 +176,7 @@
 	* DESCRIPTION (Version): New version is 1.1-9.
 
 	* R/polybase.R (Ops.polynomial): Divide and remainder had 'lq'
-	instead of 'l2'.  Problem spotted by Oleg Müller
+	instead of 'l2'.  Problem spotted by Oleg M?ller
 	<Oleg.Mueller@wiso.uni-erlangen.de>.
 
 2001-11-27  Kurt Hornik  <Kurt.Hornik@ci.tuwien.ac.at>

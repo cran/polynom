@@ -1,17 +1,17 @@
-## ----setup, include = FALSE----------------------------------------------
+## ----setup, include = FALSE---------------------------------------------------
 knitr::opts_chunk$set(collapse = TRUE,
                       comment = "",
-                      fig.height = 7,
-                      fig.width = 9,
-                      fig.align = "center",
-                      out.height = "0.25\\textheight")
+                      fig.height = 6,
+                      fig.width = 8,
+                      fig.align = "center")
+                      # out.width = "0.25\\textheight")
 library(polynom)
 setHook("plot.new",
         list(las = function() par(las = 1),
              pch = function() par(pch = 20)),
         "append")
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 He <- list(polynomial(1), polynomial(0:1))
 x <- polynomial()
 for (n in 3:6) {
@@ -22,14 +22,14 @@ plot(He)
 plot(deriv(He))
 plot(integral(He))
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 x <- c(0,1,2,4)
 (op <- poly.orth(x))
 (fop <- lapply(op, as.function))
 (P <- sapply(fop, function(f) f(x)))
 zapsmall(crossprod(P))     ### Verify orthonormality
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 (p1 <- poly.calc(1:6))
 (p2 <- change.origin(p1, 3))
 predict(p1, 0:7)
@@ -40,7 +40,7 @@ fp3 <- as.function(p3)          # should have 1, 2, 3 as zeros
 fp3(0:4)
 
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 x <- 80:89
 y <- c(487, 370, 361, 313, 246, 234, 173, 128, 88, 83)
 

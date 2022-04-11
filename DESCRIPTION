@@ -1,5 +1,5 @@
 Package: polynom
-Version: 1.4-0
+Version: 1.4-1
 Title: A Collection of Functions to Implement a Class for Univariate
         Polynomial Manipulations
 Authors@R: c(person("Bill", "Venables", role = c("aut", "cre"),
@@ -22,6 +22,6 @@ Author: Bill Venables [aut, cre] (S original),
 Maintainer: Bill Venables <Bill.Venables@gmail.com>
 Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
-Packaged: 2019-03-20 22:46:48 UTC; ven037
+Packaged: 2022-04-11 02:34:34 UTC; Bill
 Repository: CRAN
-Date/Publication: 2019-03-22 09:50:06 UTC
+Date/Publication: 2022-04-11 03:00:02 UTC

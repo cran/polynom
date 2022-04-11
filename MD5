@@ -1,16 +1,16 @@
 75a5f98fd04a11a2a774315eba571138 *ChangeLog
-ae25f13ac2cba60201c24dd4432f25ce *DESCRIPTION
+9d50ab464717d296e8f19a2fa2fef271 *DESCRIPTION
 17668d43cf1b4165e931f4e3d7399b43 *NAMESPACE
 89a4fb421a02956a0f41588527e42d14 *R/polybase.R
 a9cc0c99e1fef950836adf7985791014 *R/polylist.R
 d47dc3e02df689b2df9bf9f93d9c11ee *R/polyxtra.R
 119bf9f0d1652b468ff37c6f12f1aa21 *R/utils.R
 3d745afa5c949f279bd6da4bfc251882 *README
-b4be183a8d5290ae21c6e3ad1849fd71 *build/vignette.rds
+344e4fe934dc7f7a774e7e766c5d2de4 *build/vignette.rds
 cffcb1ed229d98b92d31576c96fb5117 *inst/CITATION
-56c30b94ac99ea941455a0411e166c9b *inst/doc/polynomials.R
-bc99c646680fae1f34bf1ab9914a083a *inst/doc/polynomials.Rmd
-79b75406fc82fa802bce10dbd92ed013 *inst/doc/polynomials.pdf
+3e30ec1382fd3d5f2aa28e888cda1e9f *inst/doc/polynomials.R
+b45797ee7f9e6415fa775983fcd471aa *inst/doc/polynomials.Rmd
+6fdd140fdf51bbd6880951fee0394a25 *inst/doc/polynomials.html
 b7a2315cf2ad37e3a203b1a9c754515a *man/Math.polynomial.Rd
 0b2f80b2fcdd445885ab6bdf150f5f47 *man/Ops.polynomial.Rd
 53693e01e80a9693d8128a6e079e4936 *man/as.function.polynomial.Rd
@@ -31,4 +31,4 @@ feec30713ce4153ad5176426c1dd03ec *man/polynomial.Rd
 8f5284768b8f41ad4b89eb79f6f5453e *man/summary.polynomial.Rd
 bbb4951f234eb0793fb0aa05b6060232 *man/zSummary.polynomial.Rd
 29b3c1cd5afd54ae3b56054e11c5d446 *vignettes/header.tex
-bc99c646680fae1f34bf1ab9914a083a *vignettes/polynomials.Rmd
+b45797ee7f9e6415fa775983fcd471aa *vignettes/polynomials.Rmd
